@@ -31,7 +31,7 @@ public class RegistrationTest {
         $$(".react-datepicker__day").find(text("29")).click();
         $("#subjectsInput").setValue("English").pressEnter();
         $(byText("Music")).click();
-        $("#uploadPicture").uploadFromClasspath("mexico.jpg");
+//        $("#uploadPicture").uploadFromClasspath("mexico.jpg");
         $("#currentAddress").setValue("Russia");
         $("#state").click();
         $(byText("NCR")).click();
