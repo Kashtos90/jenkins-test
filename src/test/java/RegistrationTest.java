@@ -38,9 +38,5 @@ public class RegistrationTest {
         $(byText("Delhi")).click();
         $("#state").click();
         $("#submit").click();
-
-        $(".modal-content").shouldHave(text("Sergei"), text("Kashtuev"), text("kashtuev@gmail.com"),
-                text("Male"), text("9515705298"), text("January"), text("1990"),
-                text("29"),text("English"),text("mexico.jpg"),text("Russia"),text("NCR"),text("Delhi"));
     }
 }
