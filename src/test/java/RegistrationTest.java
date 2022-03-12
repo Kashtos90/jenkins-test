@@ -36,6 +36,7 @@ public class RegistrationTest {
         $(byText("NCR")).click();
         $("#city").click();
         $(byText("Delhi")).click();
+        $("#state").click();
         $("#submit").click();
 
         $(".modal-content").shouldHave(text("Sergei"), text("Kashtuev"), text("kashtuev@gmail.com"),
