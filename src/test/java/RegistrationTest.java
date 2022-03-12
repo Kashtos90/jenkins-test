@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
+import static io.qameta.allure.Allure.step;
 
 public class RegistrationTest {
 
@@ -38,26 +39,70 @@ public class RegistrationTest {
 
     @Test
     void succesFillTest() {
+        step("Открываем форму", () -> {
         open("/automation-practice-form");
+        });
+
+        step("Проверяем хэдер", () -> {
         $(".main-header").shouldHave(text("Practice Form"));
+        });
+
+        step("Вводим имя", () -> {
         $("#firstName").setValue("Sergei");
+        });
+
+        step("Вводим фамилию", () -> {
         $("#lastName").setValue("Kashtuev");
+        });
+
+        step("Вводим почту", () -> {
         $("#userEmail").setValue("kashtuev@gmail.com");
+        });
+
+        step("Выбираем пол", () -> {
         $("#genterWrapper").find(byText("Male")).click();
+        });
+
+        step("Вводим номер телефона", () -> {
         $("#userNumber").setValue("9515705298");
+        });
+
+        step("Выбираем дату рождения", () -> {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("January");
         $(".react-datepicker__year-select").selectOption("1990");
         $$(".react-datepicker__day").find(text("29")).click();
+        });
+
+        step("Выбираем предмет", () -> {
         $("#subjectsInput").setValue("English").pressEnter();
+        });
+
+        step("Выбираем увлечения", () -> {
         $(byText("Music")).click();
+        });
+
+        step("Загружаем фото", () -> {
 //        $("#uploadPicture").uploadFromClasspath("mexico.jpg");
+        });
+
+        step("Указываем страну", () -> {
         $("#currentAddress").setValue("Russia");
+        });
+
+        step("Выбираем штат", () -> {
         $("#state").click();
         $(byText("NCR")).click();
+        });
+
+        step("Выбираем город", () -> {
         $("#city").click();
         $(byText("Delhi")).click();
+        });
+
+        step("Потверждаем ввод данных", () -> {
         $("#state").click();
         $("#submit").click();
+        });
     }
 }
