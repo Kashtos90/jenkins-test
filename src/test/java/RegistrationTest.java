@@ -21,7 +21,7 @@ public class RegistrationTest {
 
         String user = System.getProperty("user");
         String password = System.getProperty("password");
-        String remoteBrowser = System.getProperty("selenoid.autotests.cloud/wd/hub");
+        String remoteBrowser = System.getProperty("remoteBrowser");
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
