@@ -63,6 +63,3 @@ task smoke_test(type: Test) {
         includeTags "smoke"
     }
 }
-
-// 5229200470:AAEfi9qn22cUdJLZwUgIi4T4yqXBxTqGgHE - токен
-// 82067136 - чат id

@@ -1,0 +1,7 @@
+// 5229200470:AAEfi9qn22cUdJLZwUgIi4T4yqXBxTqGgHE - токен
+// -682067136 - чат id
+
+// curl -X POST \
+    -H 'Content-Type: application/json' \
+    -d '{"chat_id": "-682067136", "text": "This is a test from my heart", "disable_notification": true}' \
+     https://api.telegram.org/bot5229200470:AAEfi9qn22cUdJLZwUgIi4T4yqXBxTqGgHE/sendMessage
