@@ -15,6 +15,6 @@ java \
 "-DprojectName=${PROJECT_NAME}" \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
-"-Dcomm=Any comment here" \
+"-Dcomm=${COMMENT}" \
 "-Dconfig.file=notifications/telega_config.json" \
 -jar notifications/allure-notifications-3.1.2.jar
